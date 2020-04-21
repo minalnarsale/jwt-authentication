@@ -1,0 +1,12 @@
+#files, foleders to ignore
+
+.env
+package-lock.json
+
+# dependencies
+/node_modules
+
+yarn.lock*
+
+#intelliJ files
+.idea*
