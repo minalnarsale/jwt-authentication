@@ -8,7 +8,11 @@ const checkAuth = require('../middleware/check-auth');
 
 //signUp : saving user in db
 router.post('/', (req, res) => {
-
+    console.log('email : ' + req.body.email);
+    console.log('firstName : ' + req.body.firstName);
+    console.log('lastName : ' + req.body.lastName);
+    console.log('password : ' + req.body.password);
+    console.log('req : ' + req.toString());
     User.find({ email: req.body.email })
         .exec()
         .then(user => {

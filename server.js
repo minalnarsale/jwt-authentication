@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 // dotenv.config(); //dotenv to read .env varriables into Node application
 
 const app = express();
-const port = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +21,7 @@ mongoose.connection
     });
 
 //start the server
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));
 
 //middleware : serving REST API routes
 app.use('/user', require('./api/routes/user.js'));

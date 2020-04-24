@@ -5,7 +5,11 @@
   border: 10px solid green;
   padding: 50px;
   display: block;
-  transform: translate(0%, 50%);
+}
+
+#signin {
+  text-align: center;
+  margin-top: 150px;
 }
 
 .App-logo {
